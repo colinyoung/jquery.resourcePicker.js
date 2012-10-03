@@ -4,7 +4,7 @@ Simple jQuery plugin that redirects the UA to a resource URL onChange.
 Ex:
 $('#mySelectTag').resourcePicker()
 
-<select data-resource="post">
+<select data-resource-picker="post">
   <option value="1">Post 1</option>
 </select>
 */
@@ -12,7 +12,7 @@ $('#mySelectTag').resourcePicker()
 $.fn.resourcePicker = function(options) {
   var _this = this;
   
-  this.resource = $(this).attr('data-resource');
+  this.resource = $(this).attr('data-resource-picker');
   if (typeof this.resource === "undefined") {
     console.debug("jQuery.resourcePicker.js: You must add a `data-resource' attribute to your select tag.");
     return;
